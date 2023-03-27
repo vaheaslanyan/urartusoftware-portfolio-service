@@ -1,4 +1,4 @@
-package models;
+package com.urartusoftware.urartusoftwareportfolioservice.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -19,6 +19,11 @@ public class Project {
     public Project(String name, String description) {
         this.name = name;
         this.description = description;
+    }
+
+    public Project(ProjectDTO pDTO) {
+        this.name = pDTO.getName();
+        this.description = pDTO.getDescription();
     }
 
     // toString

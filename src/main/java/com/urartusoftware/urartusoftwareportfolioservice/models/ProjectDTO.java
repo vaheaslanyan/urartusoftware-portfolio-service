@@ -1,4 +1,4 @@
-package models;
+package com.urartusoftware.urartusoftwareportfolioservice.models;
 
 public class ProjectDTO {
     private String id;
@@ -17,6 +17,12 @@ public class ProjectDTO {
     public ProjectDTO(String name, String description) {
         this.name = name;
         this.description = description;
+    }
+
+    public ProjectDTO(Project p) {
+        this.id = p.getId();
+        this.name = p.getName();
+        this.description = p.getDescription();
     }
 
     // toString
