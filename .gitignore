@@ -1,6 +1,7 @@
 HELP.md
 .gradle
-build/
+# allowing build in git for docker deployment on render
+#build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/

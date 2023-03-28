@@ -1,0 +1,17 @@
+server:
+  port: 8282
+
+spring:
+  data:
+    mongodb:
+      uri: ${US_MONGODB_URI}
+      database: ${US_MONGODB_DB}
+      username: ${US_MONGODB_USERNAME}
+      password: ${US_MONGODB_PASSWORD}
+      authentication-database: admin
+
+deployment:
+  ip:
+    ui:
+      local: http://localhost:4200
+      deployed: https://urartusoftware.com
