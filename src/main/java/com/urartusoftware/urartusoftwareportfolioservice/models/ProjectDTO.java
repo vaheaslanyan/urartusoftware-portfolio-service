@@ -1,28 +1,34 @@
 package com.urartusoftware.urartusoftwareportfolioservice.models;
 
+import java.util.List;
+
 public class ProjectDTO {
     private String id;
     private String name;
     private String description;
+    private List<String> imageUrls;
 
     // Constructors
     public ProjectDTO(){}
 
-    public ProjectDTO(String id, String name, String description) {
+    public ProjectDTO(String id, String name, String description, List<String> imageUrls) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.imageUrls = imageUrls;
     }
 
-    public ProjectDTO(String name, String description) {
+    public ProjectDTO(String name, String description, List<String> imageUrls) {
         this.name = name;
         this.description = description;
+        this.imageUrls = imageUrls;
     }
 
     public ProjectDTO(Project p) {
         this.id = p.getId();
         this.name = p.getName();
         this.description = p.getDescription();
+        this.imageUrls = p.getImageUrls();
     }
 
     // toString
@@ -31,7 +37,8 @@ public class ProjectDTO {
         return "Project{" +
                 "id='" + id + '\'' +
                 "name='" + name + '\'' +
-                "description'" + description + '\'' +
+                "description='" + description + '\'' +
+                "imageUrls='" + imageUrls + '\'' +
                 '}';
     }
 
@@ -73,5 +80,13 @@ public class ProjectDTO {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<String> getImageUrls() {
+        return imageUrls;
+    }
+
+    public void setImageUrls(List<String> imageUrls) {
+        this.imageUrls = imageUrls;
     }
 }

@@ -3,6 +3,8 @@ package com.urartusoftware.urartusoftwareportfolioservice.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 @Document
 public class Project {
 
@@ -10,20 +12,23 @@ public class Project {
     private String id;
     private String name;
     private String description;
+    private List<String> imageUrls;
 
     // NEED to add tech tags
 
     // Constructors
     public Project() {}
 
-    public Project(String name, String description) {
+    public Project(String name, String description, List<String> imageUrls) {
         this.name = name;
         this.description = description;
+        this.imageUrls = imageUrls;
     }
 
     public Project(ProjectDTO pDTO) {
         this.name = pDTO.getName();
         this.description = pDTO.getDescription();
+        this.imageUrls = pDTO.getImageUrls();
     }
 
     // toString
@@ -33,6 +38,7 @@ public class Project {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
+                ", imageUrls='" + imageUrls + '\'' +
                 '}';
     }
 
@@ -76,5 +82,13 @@ public class Project {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<String> getImageUrls() {
+        return imageUrls;
+    }
+
+    public void setImageUrls(List<String> imageUrls) {
+        this.imageUrls = imageUrls;
     }
 }
