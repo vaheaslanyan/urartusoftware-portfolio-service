@@ -1,13 +1,14 @@
+server:
+  port: 8282
+
 spring:
-  server:
-    port: 8282
-#  data:
-#    mongodb:
-#      uri: ${US_MONGODB_URI}
-#      database: ${US_MONGODB_DB}
-#      username: ${US_MONGODB_USERNAME}
-#      password: ${US_MONGODB_PASSWORD}
-#      authentication-database: admin
+  data:
+    mongodb:
+      uri: ${US_MONGODB_URI}
+      database: ${US_MONGODB_DB}
+      username: ${US_MONGODB_USERNAME}
+      password: ${US_MONGODB_PASSWORD}
+      authentication-database: admin
 
 deployment:
   ip:
