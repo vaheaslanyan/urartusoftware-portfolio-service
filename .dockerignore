@@ -1,0 +1,21 @@
+# Gradle build files
+#build/
+.gradle/
+
+# Test files
+src/test/
+
+# IDE-specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Log files
+logs/
+
+# Miscellaneous files
+.DS_Store
+*.log
+*.jar
