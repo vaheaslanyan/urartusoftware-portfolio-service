@@ -17,6 +17,14 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version: '3.0.4'
+	// https://mvnrepository.com/artifact/com.cloudinary/cloudinary-core
+	implementation group: 'com.cloudinary', name: 'cloudinary-core', version: '1.33.0'
+	// https://mvnrepository.com/artifact/com.cloudinary/cloudinary-http44
+	implementation group: 'com.cloudinary', name: 'cloudinary-http44', version: '1.33.0'
+	// https://mvnrepository.com/artifact/com.cloudinary/cloudinary-taglib
+	implementation group: 'com.cloudinary', name: 'cloudinary-taglib', version: '1.33.0'
+
+
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

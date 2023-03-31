@@ -15,3 +15,9 @@ deployment:
     ui:
       local: http://localhost:4200
       deployed: https://urartusoftware.com
+
+cloudinary:
+  cloud-name: ${US_CLOUDINARY_NAME}
+  api:
+    key: ${US_CLOUDINARY_API_KEY}
+    secret: ${US_CLOUDINARY_API_SECRET}
